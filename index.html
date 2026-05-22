@@ -47,13 +47,13 @@
   .glyph.q{color:var(--ink3);}
   .flabel{font-size:10.5px; color:var(--ink2); line-height:1.25;}
   .flabel b{color:var(--ink); font-weight:600;}
-  .ico{width:30px; height:30px; color:var(--ink);}
-  .ico-sm{width:26px; height:26px;}
+  .ico{width:36px; height:36px; color:var(--ink);}
+  .ico-sm{width:32px; height:32px;}
 
   .legend{display:flex; flex-wrap:wrap; align-items:center; gap:8px 18px; margin:0 0 20px; padding:11px 14px; background:var(--bg2); border:1px solid var(--border); border-radius:8px; font-size:12.5px; color:var(--ink2);}
   .legend span{display:inline-flex; align-items:center; gap:6px; white-space:nowrap;}
   .legend b{color:var(--ink); font-family:"Apple Symbols","Segoe UI Symbol",sans-serif; font-size:16px;}
-  .legend .ico{width:20px;height:20px;}
+  .legend .ico{width:24px;height:24px;}
 
   .opt-sub{font-size:13px; font-weight:600; color:var(--ink); margin:18px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--border);}
   .opt-sub:first-of-type{margin-top:4px;}
@@ -62,44 +62,27 @@
   .opt-name{flex:0 0 96px; font-size:13.5px; font-weight:600;}
   .opt-name small{display:block; font-weight:400; color:var(--ink3); font-size:11px;}
   .opt-swatches{display:flex; gap:10px; flex-wrap:wrap;}
-  .swatch{width:74px; border:1px solid var(--border); border-radius:8px; background:var(--bg); padding:8px 4px 6px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:5px;}
+  .swatch{width:80px; border:1px solid var(--border); border-radius:8px; background:var(--bg); padding:10px 4px 7px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:6px;}
   .swatch.pick{border-color:var(--gold-soft-border); background:var(--gold-soft);}
-  .swatch .glyph{font-size:26px;}
+  .swatch .glyph{font-size:30px;}
+  .swatch .ico{width:42px; height:42px;}
   .swatch small{font-size:9.5px; color:var(--ink3); line-height:1.2;}
-
-  ul.notes{margin:0; padding:0; list-style:none;}
-  ul.notes li{position:relative; padding:9px 0 9px 22px; border-bottom:1px solid var(--border); font-size:13.5px; color:var(--ink);}
-  ul.notes li:last-child{border-bottom:none;}
-  ul.notes li::before{content:""; position:absolute; left:2px; top:15px; width:7px; height:7px; border-radius:50%; background:var(--gold-line);}
-  .open li::before{background:var(--accent);}
-  .tag{display:inline-block; font-family:"JetBrains Mono",monospace; font-size:10px; padding:1px 6px; border-radius:4px; background:#EFF6FF; color:var(--accent); margin-right:6px; vertical-align:1px;}
-  .small{font-size:12px; color:var(--ink3); margin-top:6px;}
 </style>
 </head>
 <body>
 
-<!-- icon library — all line icons share the same 1.5 stroke weight, outline only -->
+<!-- icon library — all line icons share one stroke weight, outline only -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="i-sun" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="14" cy="14" r="5"/>
-      <line x1="14" y1="3.5" x2="14" y2="6"/><line x1="14" y1="22" x2="14" y2="24.5"/>
-      <line x1="3.5" y1="14" x2="6" y2="14"/><line x1="22" y1="14" x2="24.5" y2="14"/>
-      <line x1="6.6" y1="6.6" x2="8.4" y2="8.4"/><line x1="19.6" y1="19.6" x2="21.4" y2="21.4"/>
-      <line x1="6.6" y1="21.4" x2="8.4" y2="19.6"/><line x1="19.6" y1="8.4" x2="21.4" y2="6.6"/>
+    <symbol id="i-rise" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" y1="21.5" x2="24" y2="21.5"/>
+      <path d="M8 14 A6 6 0 0 1 20 14"/>
     </symbol>
-    <symbol id="i-moon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M17.5 4.2 A10.2 10.2 0 1 0 17.5 23.8 A8 8 0 1 1 17.5 4.2 Z"/>
-    </symbol>
-    <symbol id="i-rise" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="4" y1="18.5" x2="24" y2="18.5"/>
-      <path d="M8 18.5 A6 6 0 0 1 20 18.5"/>
-    </symbol>
-    <symbol id="i-fish" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <symbol id="i-fish" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
       <path d="M7 14 C10 9 18.5 9 22 14 C18.5 19 10 19 7 14 Z"/>
       <path d="M7 14 L2.5 10 L4 14 L2.5 18 Z"/>
     </symbol>
-    <symbol id="i-crab" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <symbol id="i-crab" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
       <ellipse cx="14" cy="16" rx="6.6" ry="4.2"/>
       <path d="M8.6 13 C6 11.5 5 9.5 6.2 8 C7.4 9 8.2 10.6 9.2 12"/>
       <path d="M19.4 13 C22 11.5 23 9.5 21.8 8 C20.6 9 19.8 10.6 18.8 12"/>
@@ -108,14 +91,14 @@
       <path d="M8 17.5 L4.8 19"/><path d="M8.5 19 L5.9 21.2"/>
       <path d="M20 17.5 L23.2 19"/><path d="M19.5 19 L22.1 21.2"/>
     </symbol>
-    <symbol id="i-wheat" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <symbol id="i-wheat" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
       <path d="M14 25 L14 8"/>
       <path d="M14 8 Q14 4 14 2"/>
       <path d="M14 9 Q10.5 6.5 11.5 2.6"/><path d="M14 9 Q17.5 6.5 16.5 2.6"/>
       <path d="M14 14 Q10 11.5 11 7"/><path d="M14 14 Q18 11.5 17 7"/>
       <path d="M14 19 Q9.5 16.5 10.6 11.6"/><path d="M14 19 Q18.5 16.5 17.4 11.6"/>
     </symbol>
-    <symbol id="i-scorpion" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <symbol id="i-scorpion" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
       <path d="M8.5 14.8 L5 12.8"/><path d="M5 12.8 L2.8 11.4"/><path d="M5 12.8 L3 14.2"/>
       <path d="M8.5 16.6 L5 18.6"/><path d="M5 18.6 L2.8 17.2"/><path d="M5 18.6 L3 20"/>
       <ellipse cx="11" cy="15.7" rx="2.9" ry="1.9"/>
@@ -216,7 +199,7 @@
         <p class="figcap"><b>Side view</b><br>facets visible · rounded edges · chain through centre</p>
       </div>
     </div>
-    <p class="small">As small as is practical: about <b>3.5–4&nbsp;mm across the flats</b>, ~2.5–3&nbsp;mm tall, hole under 1&nbsp;mm — final call with the jeweler. The limit on going smaller is engraving legibility (six tiny icons per bead), not the gold. Engraving this fine wants laser engraving.</p>
+    <p class="small" style="font-size:12px; color:var(--ink3); margin-top:6px;">As small as is practical: about <b>3.5–4&nbsp;mm across the flats</b>, ~2.5–3&nbsp;mm tall, hole under 1&nbsp;mm — final call with the jeweler. The limit on going smaller is engraving legibility (six tiny icons per bead), not the gold. Engraving this fine wants laser engraving.</p>
   </section>
 
   <!-- 3. ENGRAVING -->
@@ -276,27 +259,15 @@
   <section>
     <span class="sec-no">04</span>
     <h2>Symbol style — pick a direction</h2>
-    <p class="lead">Two ways to render each facet: the clean <b>astrological symbol</b>, or a more playful <b>illustrated</b> icon (a fish, a crab…). You can keep all symbols, go all-illustrated, or mix. All illustrated icons share one line weight, outline only.</p>
+    <p class="lead">Sun, moon and rising use the marks below. For each zodiac sign, choose the clean <b>astrological symbol</b> or a more playful <b>illustrated</b> icon (a fish, a crab…) — keep all symbols, go all-illustrated, or mix. All illustrated icons share one line weight, outline only.</p>
 
     <div class="opt-sub">Sun · Moon · Rising</div>
     <div class="optrow">
-      <div class="opt-name">Sun<small>keeping symbol</small></div>
+      <div class="opt-name">The marks</div>
       <div class="opt-swatches">
-        <div class="swatch pick"><span class="glyph">☉</span><small>symbol</small></div>
-        <div class="swatch"><svg class="ico"><use href="#i-sun"/></svg><small>illustrated</small></div>
-      </div>
-    </div>
-    <div class="optrow">
-      <div class="opt-name">Moon<small>keeping symbol</small></div>
-      <div class="opt-swatches">
-        <div class="swatch pick"><span class="glyph">☽</span><small>symbol</small></div>
-        <div class="swatch"><svg class="ico"><use href="#i-moon"/></svg><small>illustrated</small></div>
-      </div>
-    </div>
-    <div class="optrow">
-      <div class="opt-name">Rising<small>new symbol</small></div>
-      <div class="opt-swatches">
-        <div class="swatch pick"><svg class="ico"><use href="#i-rise"/></svg><small>rising over horizon</small></div>
+        <div class="swatch pick"><span class="glyph">☉</span><small>sun</small></div>
+        <div class="swatch pick"><span class="glyph">☽</span><small>moon</small></div>
+        <div class="swatch pick"><svg class="ico"><use href="#i-rise"/></svg><small>rising</small></div>
       </div>
     </div>
 
@@ -329,23 +300,7 @@
         <div class="swatch"><svg class="ico"><use href="#i-scorpion"/></svg><small>scorpion</small></div>
       </div>
     </div>
-    <p class="small">Illustrated icons are rough sketches to show the direction — they'd be cleaned up before engraving. Lexi's rising and your son's moon + rising get icons once we know the signs. (Virgo's wheat: the sign is the maiden holding an ear of wheat — its brightest star is literally named "the ear of grain." Happy to try a maiden figure instead.)</p>
-  </section>
-
-  <!-- 5. NOTES -->
-  <section>
-    <span class="sec-no">05</span>
-    <h2>Notes &amp; open items</h2>
-    <ul class="notes">
-      <li>All three beads are identical in form — they differ only by the signs engraved.</li>
-      <li>Solid gold, to match the chain. Final size and karat to set with the jeweler.</li>
-      <li>The fine chain is shown for context — not part of what gets made.</li>
-    </ul>
-    <ul class="notes open" style="margin-top:14px;">
-      <li><span class="tag">DECIDE</span>Symbol style — keep the astrological symbols, go all-illustrated, or mix (see section 04).</li>
-      <li><span class="tag">TO GET</span>Lexi's rising sign — needs her birth date, exact time, and city.</li>
-      <li><span class="tag">AT BIRTH</span>Your son's moon &amp; rising — just make sure the exact birth time is noted. Sun is Cancer unless he's ~a week late.</li>
-    </ul>
+    <p class="small" style="font-size:12px; color:var(--ink3); margin-top:14px;">Illustrated icons are rough sketches to show the direction — they'd be cleaned up before engraving. Lexi's rising and your son's moon + rising get icons once we know the signs. (Virgo's wheat: the sign is the maiden holding an ear of wheat — its brightest star is literally named "the ear of grain." Happy to try a maiden figure instead.)</p>
   </section>
 
 </div>
