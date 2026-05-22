@@ -1,128 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Name — Tagline</title>
-  <meta name="description" content="Your project description for SEO.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            surface: { 1: '#09090b', 2: '#0f0f12', 3: '#16161a', 4: '#1e1e24' },
-            coral: { DEFAULT: '#e8735e', light: '#f09a8a', dark: '#c45a47' },
-            amber: { DEFAULT: '#d4a23a', light: '#e4be6a' },
-            zinc: { 50: '#fafafa', 100: '#f4f4f5', 200: '#e4e4e7', 300: '#d4d4d8', 400: '#a1a1aa', 500: '#71717a', 600: '#52525b', 700: '#3f3f46', 800: '#27272a', 900: '#18181b' }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace']
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
-  </style>
-</head>
-<body class="bg-surface-1 text-zinc-200 antialiased">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Gold Bead Necklace — Concept Spec</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF; --bg2:#F8F9FA; --bg3:#F1F3F5;
+    --ink:#1A1D21; --ink2:#6B7280; --ink3:#9CA3AF;
+    --border:#E5E7EB; --accent:#2563EB;
+    --gold-line:#B8932E; --gold-soft:#FBF6E7; --gold-soft-border:#E7D9A8;
+    --radius:10px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg3); font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); line-height:1.5; -webkit-font-smoothing:antialiased;}
+  .page{max-width:780px; margin:32px auto; background:var(--bg); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;}
+  header{padding:30px 36px 22px; border-bottom:1px solid var(--border);}
+  .kicker{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink3); margin:0 0 8px;}
+  h1{font-size:26px; font-weight:700; margin:0 0 6px; letter-spacing:-.01em;}
+  .sub{font-size:15px; color:var(--ink2); margin:0;}
+  .goldrule{height:3px; background:var(--gold-line); width:54px; border-radius:3px; margin-top:16px;}
+  section{padding:26px 36px; border-bottom:1px solid var(--border);}
+  section:last-child{border-bottom:none;}
+  .sec-no{font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--gold-line); letter-spacing:.1em;}
+  h2{font-size:17px; font-weight:600; margin:4px 0 4px;}
+  .lead{font-size:14px; color:var(--ink2); margin:0 0 18px; max-width:62ch;}
+  .figure{background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:18px; display:flex; justify-content:center; align-items:center;}
+  .figrow{display:flex; gap:14px; flex-wrap:wrap;}
+  .figrow .figure{flex:1; min-width:200px; flex-direction:column; gap:10px;}
+  .figcap{font-size:12px; color:var(--ink2); text-align:center; margin:0;}
+  .figcap b{color:var(--ink); font-weight:600;}
 
-  <!-- ═══ DARK HERO ═══ -->
-  <header class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-surface-1 via-surface-2 to-surface-3"></div>
-    <nav class="relative z-10 max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-      <a href="/" class="text-lg font-bold tracking-tight text-white">ProjectName</a>
-      <div class="flex items-center gap-8">
-        <a href="#features" class="text-sm text-zinc-400 hover:text-white transition-colors">Features</a>
-        <a href="#about" class="text-sm text-zinc-400 hover:text-white transition-colors">About</a>
-        <a href="#cta" class="text-sm font-medium text-surface-1 bg-coral px-4 py-2 rounded-lg hover:bg-coral-light transition-colors">Get Started</a>
-      </div>
-    </nav>
-    <div class="relative z-10 max-w-4xl mx-auto px-6 pt-24 pb-32 text-center">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-coral/10 border border-coral/20 rounded-full text-xs font-medium text-coral font-mono mb-8">
-        <span class="w-1.5 h-1.5 bg-coral rounded-full"></span>
-        STATUS OR TAGLINE
-      </div>
-      <h1 class="text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-6">
-        Your headline goes here<span class="text-coral">.</span>
-      </h1>
-      <p class="text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed mb-10">
-        A clear, concise description of what this project does and why someone should care. Keep it to two sentences max.
-      </p>
-      <div class="flex items-center justify-center gap-4">
-        <a href="#cta" class="bg-coral text-surface-1 font-semibold px-6 py-3 rounded-lg hover:bg-coral-light transition-colors">Primary Action</a>
-        <a href="#features" class="border border-surface-4 text-zinc-300 font-medium px-6 py-3 rounded-lg hover:bg-surface-3 transition-colors">Learn More</a>
-      </div>
-    </div>
+  .bead-block{margin-bottom:20px;}
+  .bead-block:last-child{margin-bottom:0;}
+  .bead-head{display:flex; align-items:baseline; gap:10px; margin-bottom:8px;}
+  .bead-name{font-size:15px; font-weight:600;}
+  .bead-meta{font-size:12px; color:var(--ink3);}
+  .strip{display:grid; grid-template-columns:repeat(6,1fr); gap:8px;}
+  .facet{border:1px solid var(--border); border-radius:8px; background:var(--bg); padding:10px 4px 8px; text-align:center; min-height:90px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:6px;}
+  .facet.lum{background:var(--gold-soft); border-color:var(--gold-soft-border);}
+  .facet.tbd{border-style:dashed; background:var(--bg2);}
+  .glyph{font-size:30px; line-height:1; color:var(--ink); font-family:"Apple Symbols","Segoe UI Symbol","DM Sans",sans-serif;}
+  .glyph.q{color:var(--ink3);}
+  .flabel{font-size:10.5px; color:var(--ink2); line-height:1.25;}
+  .flabel b{color:var(--ink); font-weight:600;}
+  .ico{width:30px; height:30px; color:var(--ink);}
+  .ico-sm{width:26px; height:26px;}
+
+  .legend{display:flex; flex-wrap:wrap; align-items:center; gap:8px 18px; margin:0 0 20px; padding:11px 14px; background:var(--bg2); border:1px solid var(--border); border-radius:8px; font-size:12.5px; color:var(--ink2);}
+  .legend span{display:inline-flex; align-items:center; gap:6px; white-space:nowrap;}
+  .legend b{color:var(--ink); font-family:"Apple Symbols","Segoe UI Symbol",sans-serif; font-size:16px;}
+  .legend .ico{width:20px;height:20px;}
+
+  .opt-sub{font-size:13px; font-weight:600; color:var(--ink); margin:18px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--border);}
+  .opt-sub:first-of-type{margin-top:4px;}
+  .optrow{display:flex; align-items:center; gap:14px; padding:8px 0;}
+  .optrow + .optrow{border-top:1px dashed var(--border);}
+  .opt-name{flex:0 0 96px; font-size:13.5px; font-weight:600;}
+  .opt-name small{display:block; font-weight:400; color:var(--ink3); font-size:11px;}
+  .opt-swatches{display:flex; gap:10px; flex-wrap:wrap;}
+  .swatch{width:74px; border:1px solid var(--border); border-radius:8px; background:var(--bg); padding:8px 4px 6px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:5px;}
+  .swatch.pick{border-color:var(--gold-soft-border); background:var(--gold-soft);}
+  .swatch .glyph{font-size:26px;}
+  .swatch small{font-size:9.5px; color:var(--ink3); line-height:1.2;}
+
+  ul.notes{margin:0; padding:0; list-style:none;}
+  ul.notes li{position:relative; padding:9px 0 9px 22px; border-bottom:1px solid var(--border); font-size:13.5px; color:var(--ink);}
+  ul.notes li:last-child{border-bottom:none;}
+  ul.notes li::before{content:""; position:absolute; left:2px; top:15px; width:7px; height:7px; border-radius:50%; background:var(--gold-line);}
+  .open li::before{background:var(--accent);}
+  .tag{display:inline-block; font-family:"JetBrains Mono",monospace; font-size:10px; padding:1px 6px; border-radius:4px; background:#EFF6FF; color:var(--accent); margin-right:6px; vertical-align:1px;}
+  .small{font-size:12px; color:var(--ink3); margin-top:6px;}
+</style>
+</head>
+<body>
+
+<!-- icon library — all line icons share the same 1.5 stroke weight, outline only -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-sun" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="14" cy="14" r="5"/>
+      <line x1="14" y1="3.5" x2="14" y2="6"/><line x1="14" y1="22" x2="14" y2="24.5"/>
+      <line x1="3.5" y1="14" x2="6" y2="14"/><line x1="22" y1="14" x2="24.5" y2="14"/>
+      <line x1="6.6" y1="6.6" x2="8.4" y2="8.4"/><line x1="19.6" y1="19.6" x2="21.4" y2="21.4"/>
+      <line x1="6.6" y1="21.4" x2="8.4" y2="19.6"/><line x1="19.6" y1="8.4" x2="21.4" y2="6.6"/>
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17.5 4.2 A10.2 10.2 0 1 0 17.5 23.8 A8 8 0 1 1 17.5 4.2 Z"/>
+    </symbol>
+    <symbol id="i-rise" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" y1="18.5" x2="24" y2="18.5"/>
+      <path d="M8 18.5 A6 6 0 0 1 20 18.5"/>
+    </symbol>
+    <symbol id="i-fish" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 14 C10 9 18.5 9 22 14 C18.5 19 10 19 7 14 Z"/>
+      <path d="M7 14 L2.5 10 L4 14 L2.5 18 Z"/>
+    </symbol>
+    <symbol id="i-crab" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="14" cy="16" rx="6.6" ry="4.2"/>
+      <path d="M8.6 13 C6 11.5 5 9.5 6.2 8 C7.4 9 8.2 10.6 9.2 12"/>
+      <path d="M19.4 13 C22 11.5 23 9.5 21.8 8 C20.6 9 19.8 10.6 18.8 12"/>
+      <path d="M11.5 12.4 L11 9.8"/><circle cx="11" cy="8.8" r="1.1"/>
+      <path d="M16.5 12.4 L17 9.8"/><circle cx="17" cy="8.8" r="1.1"/>
+      <path d="M8 17.5 L4.8 19"/><path d="M8.5 19 L5.9 21.2"/>
+      <path d="M20 17.5 L23.2 19"/><path d="M19.5 19 L22.1 21.2"/>
+    </symbol>
+    <symbol id="i-wheat" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 25 L14 8"/>
+      <path d="M14 8 Q14 4 14 2"/>
+      <path d="M14 9 Q10.5 6.5 11.5 2.6"/><path d="M14 9 Q17.5 6.5 16.5 2.6"/>
+      <path d="M14 14 Q10 11.5 11 7"/><path d="M14 14 Q18 11.5 17 7"/>
+      <path d="M14 19 Q9.5 16.5 10.6 11.6"/><path d="M14 19 Q18.5 16.5 17.4 11.6"/>
+    </symbol>
+    <symbol id="i-scorpion" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8.5 14.8 L5 12.8"/><path d="M5 12.8 L2.8 11.4"/><path d="M5 12.8 L3 14.2"/>
+      <path d="M8.5 16.6 L5 18.6"/><path d="M5 18.6 L2.8 17.2"/><path d="M5 18.6 L3 20"/>
+      <ellipse cx="11" cy="15.7" rx="2.9" ry="1.9"/>
+      <line x1="10" y1="14.1" x2="10" y2="17.3"/><line x1="12" y1="14.2" x2="12" y2="17.2"/>
+      <path d="M13.8 15.4 C18 16 21 14 21.2 10.5 C21.4 7.4 19.4 6 17.6 7"/>
+      <path d="M16.6 14.8 L17.4 16.4"/><path d="M19.6 13.2 L21 14"/><path d="M20.4 10.2 L22 10.6"/>
+      <path d="M17.6 7 L15.7 5.5"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="page">
+
+  <header>
+    <p class="kicker">Concept spec · for the jeweler</p>
+    <h1>Custom Gold Bead Necklace</h1>
+    <p class="sub">Three engraved birth-chart beads — sun · moon · rising — on a fine gold chain.</p>
+    <div class="goldrule"></div>
   </header>
 
-  <!-- ═══ LIGHT BODY ═══ -->
-  <main class="bg-zinc-50 text-zinc-900">
-
-    <!-- Features -->
-    <section id="features" class="max-w-6xl mx-auto px-6 py-24">
-      <div class="text-center mb-16">
-        <p class="text-sm font-semibold text-coral uppercase tracking-wider mb-3">Features</p>
-        <h2 class="text-3xl font-bold tracking-tight">What makes this different</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white border border-zinc-200 rounded-xl p-8">
-          <div class="w-10 h-10 bg-coral/10 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-coral font-bold">01</span>
-          </div>
-          <h3 class="text-lg font-semibold mb-2">Feature One</h3>
-          <p class="text-zinc-500 leading-relaxed">Describe the feature and its benefit to the user. Keep it brief and benefit-focused.</p>
-        </div>
-        <div class="bg-white border border-zinc-200 rounded-xl p-8">
-          <div class="w-10 h-10 bg-coral/10 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-coral font-bold">02</span>
-          </div>
-          <h3 class="text-lg font-semibold mb-2">Feature Two</h3>
-          <p class="text-zinc-500 leading-relaxed">Describe the feature and its benefit to the user. Keep it brief and benefit-focused.</p>
-        </div>
-        <div class="bg-white border border-zinc-200 rounded-xl p-8">
-          <div class="w-10 h-10 bg-coral/10 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-coral font-bold">03</span>
-          </div>
-          <h3 class="text-lg font-semibold mb-2">Feature Three</h3>
-          <p class="text-zinc-500 leading-relaxed">Describe the feature and its benefit to the user. Keep it brief and benefit-focused.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="border-t border-zinc-200">
-      <div class="max-w-4xl mx-auto px-6 py-24 text-center">
-        <h2 class="text-3xl font-bold tracking-tight mb-6">About this project</h2>
-        <p class="text-lg text-zinc-500 leading-relaxed max-w-2xl mx-auto">
-          A longer description of the project, its background, and context. This section can be multiple paragraphs if needed.
-        </p>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="cta" class="border-t border-zinc-200 bg-white">
-      <div class="max-w-4xl mx-auto px-6 py-24 text-center">
-        <h2 class="text-3xl font-bold tracking-tight mb-4">Ready to get started?</h2>
-        <p class="text-zinc-500 mb-8">Call to action supporting text.</p>
-        <a href="mailto:hello@brightbase.co" class="inline-block bg-surface-1 text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-zinc-800 transition-colors">Get in Touch</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- ═══ DARK FOOTER ═══ -->
-  <footer class="bg-surface-1 border-t border-surface-4">
-    <div class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
-      <p class="text-sm text-zinc-600">&copy; 2026 ProjectName. All rights reserved.</p>
-      <p class="text-xs text-zinc-700 font-mono">built on bbase.dev</p>
+  <!-- 1. NECKLACE -->
+  <section>
+    <span class="sec-no">01</span>
+    <h2>The necklace</h2>
+    <p class="lead">A very fine gold chain threaded through the centre hole of three small beads, side by side. The chain is shown for context only — it is not part of the commission.</p>
+    <div class="figure">
+      <svg viewBox="0 0 720 230" width="100%" style="max-width:560px" role="img" aria-label="Fine chain threaded through three beads">
+        <path d="M120,30 C120,190 250,216 360,216 C470,216 600,190 600,30" fill="none" stroke="#C8A53A" stroke-width="2.4"/>
+        <line x1="296" y1="216" x2="424" y2="216" stroke="#C8A53A" stroke-width="2.4"/>
+        <g>
+          <rect x="310" y="202" width="20" height="28" rx="8" fill="#E0BE5C" stroke="#9A6F22" stroke-width="1.4"/>
+          <line x1="313" y1="209.5" x2="327" y2="209.5" stroke="#9A6F22" stroke-width="1" opacity="0.55"/>
+          <line x1="313" y1="222.5" x2="327" y2="222.5" stroke="#9A6F22" stroke-width="1" opacity="0.55"/>
+          <rect x="350" y="201" width="20" height="30" rx="8" fill="#E6C463" stroke="#9A6F22" stroke-width="1.4"/>
+          <line x1="353" y1="209.5" x2="367" y2="209.5" stroke="#9A6F22" stroke-width="1" opacity="0.55"/>
+          <line x1="353" y1="222.5" x2="367" y2="222.5" stroke="#9A6F22" stroke-width="1" opacity="0.55"/>
+          <rect x="390" y="202" width="20" height="28" rx="8" fill="#E0BE5C" stroke="#9A6F22" stroke-width="1.4"/>
+          <line x1="393" y1="209.5" x2="407" y2="209.5" stroke="#9A6F22" stroke-width="1" opacity="0.55"/>
+          <line x1="393" y1="222.5" x2="407" y2="222.5" stroke="#9A6F22" stroke-width="1" opacity="0.55"/>
+          <ellipse cx="310" cy="216" rx="2.2" ry="3" fill="#6E561A"/><ellipse cx="330" cy="216" rx="2.2" ry="3" fill="#6E561A"/>
+          <ellipse cx="350" cy="216" rx="2.2" ry="3" fill="#6E561A"/><ellipse cx="370" cy="216" rx="2.2" ry="3" fill="#6E561A"/>
+          <ellipse cx="390" cy="216" rx="2.2" ry="3" fill="#6E561A"/><ellipse cx="410" cy="216" rx="2.2" ry="3" fill="#6E561A"/>
+        </g>
+        <text x="360" y="185" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" fill="#9CA3AF">3 gold beads — chain runs through each</text>
+        <text x="120" y="20" font-family="DM Sans, sans-serif" font-size="12.5" fill="#9CA3AF">fine gold chain (context only)</text>
+      </svg>
     </div>
-  </footer>
+  </section>
 
+  <!-- 2. THE BEAD -->
+  <section>
+    <span class="sec-no">02</span>
+    <h2>The bead</h2>
+    <p class="lead">Each bead is a tiny gold hex-nut shape with softened, rounded corners and edges — pleasant to touch, no sharp points. Six flat facets around the outside; a hole through the centre for the chain.</p>
+
+    <div class="figure" style="margin-bottom:14px;">
+      <svg viewBox="0 0 400 300" width="100%" style="max-width:360px" role="img" aria-label="3D view of the rounded gold hex bead">
+        <defs>
+          <clipPath id="beadClip"><path data-poly="[[125,83.6],[195,83.6],[230,120],[230,190],[195,226.4],[125,226.4],[90,190],[90,120]]" data-r="11"/></clipPath>
+        </defs>
+        <path data-poly="[[125,83.6],[195,83.6],[230,120],[230,190],[195,226.4],[125,226.4],[90,190],[90,120]]" data-r="11" fill="#CDA94E" stroke="#8A6D24" stroke-width="1.8" stroke-linejoin="round"/>
+        <g clip-path="url(#beadClip)">
+          <polygon points="90,120 125,156.4 125,226.4 90,190" fill="#B89038"/>
+          <polygon points="195,156.4 230,120 230,190 195,226.4" fill="#9C7C28"/>
+        </g>
+        <line x1="125" y1="156.4" x2="125" y2="222" stroke="#8A6D24" stroke-width="1.3"/>
+        <line x1="195" y1="156.4" x2="195" y2="222" stroke="#8A6D24" stroke-width="1.3"/>
+        <path data-poly="[[125,83.6],[195,83.6],[230,120],[195,156.4],[125,156.4],[90,120]]" data-r="13" fill="#EAD68C" stroke="#8A6D24" stroke-width="1.8" stroke-linejoin="round"/>
+        <ellipse cx="160" cy="120" rx="22" ry="13" fill="#6E561A"/>
+        <ellipse cx="160" cy="118.5" rx="22" ry="13" fill="none" stroke="#8A6D24" stroke-width="1.1"/>
+        <line x1="160" y1="56" x2="160" y2="254" stroke="#C8A53A" stroke-width="2"/>
+        <line x1="232" y1="112" x2="300" y2="92" stroke="#C7CBD1" stroke-width="1"/>
+        <text x="305" y="96" font-family="DM Sans, sans-serif" font-size="12.5" fill="#6B7280">6 facets</text>
+        <line x1="182" y1="120" x2="300" y2="150" stroke="#C7CBD1" stroke-width="1"/>
+        <text x="305" y="154" font-family="DM Sans, sans-serif" font-size="12.5" fill="#6B7280">hole for chain</text>
+        <text x="160" y="278" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="12.5" fill="#9CA3AF">chain runs straight through</text>
+      </svg>
+    </div>
+
+    <div class="figrow">
+      <div class="figure">
+        <svg viewBox="0 0 220 210" width="100%" style="max-width:188px" role="img" aria-label="Top view of rounded hex bead">
+          <path data-poly="[[74,42.65],[146,42.65],[182,105],[146,167.35],[74,167.35],[38,105]]" data-r="15" fill="#EAD68C" stroke="#8A6D24" stroke-width="2"/>
+          <circle cx="110" cy="105" r="20" fill="#6E561A"/>
+          <circle cx="110" cy="103.5" r="20" fill="none" stroke="#8A6D24" stroke-width="1.2"/>
+        </svg>
+        <p class="figcap"><b>Top view</b><br>6 facets · rounded corners · hole in centre</p>
+      </div>
+      <div class="figure">
+        <svg viewBox="0 0 220 210" width="100%" style="max-width:188px" role="img" aria-label="Side view of rounded hex bead showing facets">
+          <line x1="110" y1="26" x2="110" y2="184" stroke="#C8A53A" stroke-width="2.2"/>
+          <rect x="63" y="69" width="94" height="72" rx="16" fill="#D9B652" stroke="#8A6D24" stroke-width="2"/>
+          <line x1="92" y1="73" x2="92" y2="137" stroke="#8A6D24" stroke-width="1.3" opacity="0.75"/>
+          <line x1="128" y1="73" x2="128" y2="137" stroke="#8A6D24" stroke-width="1.3" opacity="0.75"/>
+          <ellipse cx="110" cy="69" rx="9" ry="3" fill="#6E561A"/>
+          <ellipse cx="110" cy="141" rx="9" ry="3" fill="#6E561A"/>
+        </svg>
+        <p class="figcap"><b>Side view</b><br>facets visible · rounded edges · chain through centre</p>
+      </div>
+    </div>
+    <p class="small">As small as is practical: about <b>3.5–4&nbsp;mm across the flats</b>, ~2.5–3&nbsp;mm tall, hole under 1&nbsp;mm — final call with the jeweler. The limit on going smaller is engraving legibility (six tiny icons per bead), not the gold. Engraving this fine wants laser engraving.</p>
+  </section>
+
+  <!-- 3. ENGRAVING -->
+  <section>
+    <span class="sec-no">03</span>
+    <h2>The engraving — six facets per bead</h2>
+    <p class="lead">Reading around each bead: a symbol for the sun, then the person's sun sign; the moon, then their moon sign; rising, then their rising sign. Same pattern on all three beads — only the signs change. (Symbol style still to choose — see section 04.)</p>
+
+    <div class="legend">
+      <span><b>☉</b> Sun</span>
+      <span><b>☽</b> Moon</span>
+      <span><svg class="ico"><use href="#i-rise"/></svg> Rising</span>
+      <span>Zodiac glyphs = the actual signs</span>
+    </div>
+
+    <!-- Bead 1 -->
+    <div class="bead-block">
+      <div class="bead-head"><span class="bead-name">Bead 1 — You</span><span class="bead-meta">Pisces · Virgo · Scorpio</span></div>
+      <div class="strip">
+        <div class="facet lum"><span class="glyph">☉</span><span class="flabel">Sun</span></div>
+        <div class="facet"><span class="glyph">♓</span><span class="flabel"><b>Sun sign</b><br>Pisces</span></div>
+        <div class="facet lum"><span class="glyph">☽</span><span class="flabel">Moon</span></div>
+        <div class="facet"><span class="glyph">♍</span><span class="flabel"><b>Moon sign</b><br>Virgo</span></div>
+        <div class="facet lum"><svg class="ico ico-sm"><use href="#i-rise"/></svg><span class="flabel">Rising</span></div>
+        <div class="facet"><span class="glyph">♏</span><span class="flabel"><b>Rising sign</b><br>Scorpio</span></div>
+      </div>
+    </div>
+
+    <!-- Bead 2 -->
+    <div class="bead-block">
+      <div class="bead-head"><span class="bead-name">Bead 2 — Lexi</span><span class="bead-meta">Cancer · Virgo · ?</span></div>
+      <div class="strip">
+        <div class="facet lum"><span class="glyph">☉</span><span class="flabel">Sun</span></div>
+        <div class="facet"><span class="glyph">♋</span><span class="flabel"><b>Sun sign</b><br>Cancer</span></div>
+        <div class="facet lum"><span class="glyph">☽</span><span class="flabel">Moon</span></div>
+        <div class="facet"><span class="glyph">♍</span><span class="flabel"><b>Moon sign</b><br>Virgo</span></div>
+        <div class="facet lum"><svg class="ico ico-sm"><use href="#i-rise"/></svg><span class="flabel">Rising</span></div>
+        <div class="facet tbd"><span class="glyph q">?</span><span class="flabel"><b>Rising sign</b><br>to confirm</span></div>
+      </div>
+    </div>
+
+    <!-- Bead 3 -->
+    <div class="bead-block">
+      <div class="bead-head"><span class="bead-name">Bead 3 — Your son</span><span class="bead-meta">due Jul 16 · NYC · Sun = Cancer (assumed)</span></div>
+      <div class="strip">
+        <div class="facet lum"><span class="glyph">☉</span><span class="flabel">Sun</span></div>
+        <div class="facet"><span class="glyph">♋</span><span class="flabel"><b>Sun sign</b><br>Cancer</span></div>
+        <div class="facet lum"><span class="glyph">☽</span><span class="flabel">Moon</span></div>
+        <div class="facet tbd"><span class="glyph q">?</span><span class="flabel"><b>Moon sign</b><br>at birth</span></div>
+        <div class="facet lum"><svg class="ico ico-sm"><use href="#i-rise"/></svg><span class="flabel">Rising</span></div>
+        <div class="facet tbd"><span class="glyph q">?</span><span class="flabel"><b>Rising sign</b><br>at birth</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SYMBOL OPTIONS -->
+  <section>
+    <span class="sec-no">04</span>
+    <h2>Symbol style — pick a direction</h2>
+    <p class="lead">Two ways to render each facet: the clean <b>astrological symbol</b>, or a more playful <b>illustrated</b> icon (a fish, a crab…). You can keep all symbols, go all-illustrated, or mix. All illustrated icons share one line weight, outline only.</p>
+
+    <div class="opt-sub">Sun · Moon · Rising</div>
+    <div class="optrow">
+      <div class="opt-name">Sun<small>keeping symbol</small></div>
+      <div class="opt-swatches">
+        <div class="swatch pick"><span class="glyph">☉</span><small>symbol</small></div>
+        <div class="swatch"><svg class="ico"><use href="#i-sun"/></svg><small>illustrated</small></div>
+      </div>
+    </div>
+    <div class="optrow">
+      <div class="opt-name">Moon<small>keeping symbol</small></div>
+      <div class="opt-swatches">
+        <div class="swatch pick"><span class="glyph">☽</span><small>symbol</small></div>
+        <div class="swatch"><svg class="ico"><use href="#i-moon"/></svg><small>illustrated</small></div>
+      </div>
+    </div>
+    <div class="optrow">
+      <div class="opt-name">Rising<small>new symbol</small></div>
+      <div class="opt-swatches">
+        <div class="swatch pick"><svg class="ico"><use href="#i-rise"/></svg><small>rising over horizon</small></div>
+      </div>
+    </div>
+
+    <div class="opt-sub">Zodiac signs in play</div>
+    <div class="optrow">
+      <div class="opt-name">Pisces</div>
+      <div class="opt-swatches">
+        <div class="swatch"><span class="glyph">♓</span><small>symbol</small></div>
+        <div class="swatch"><svg class="ico"><use href="#i-fish"/></svg><small>fish</small></div>
+      </div>
+    </div>
+    <div class="optrow">
+      <div class="opt-name">Cancer</div>
+      <div class="opt-swatches">
+        <div class="swatch"><span class="glyph">♋</span><small>symbol</small></div>
+        <div class="swatch"><svg class="ico"><use href="#i-crab"/></svg><small>crab</small></div>
+      </div>
+    </div>
+    <div class="optrow">
+      <div class="opt-name">Virgo<small>see note</small></div>
+      <div class="opt-swatches">
+        <div class="swatch"><span class="glyph">♍</span><small>symbol</small></div>
+        <div class="swatch"><svg class="ico"><use href="#i-wheat"/></svg><small>wheat</small></div>
+      </div>
+    </div>
+    <div class="optrow">
+      <div class="opt-name">Scorpio</div>
+      <div class="opt-swatches">
+        <div class="swatch"><span class="glyph">♏</span><small>symbol</small></div>
+        <div class="swatch"><svg class="ico"><use href="#i-scorpion"/></svg><small>scorpion</small></div>
+      </div>
+    </div>
+    <p class="small">Illustrated icons are rough sketches to show the direction — they'd be cleaned up before engraving. Lexi's rising and your son's moon + rising get icons once we know the signs. (Virgo's wheat: the sign is the maiden holding an ear of wheat — its brightest star is literally named "the ear of grain." Happy to try a maiden figure instead.)</p>
+  </section>
+
+  <!-- 5. NOTES -->
+  <section>
+    <span class="sec-no">05</span>
+    <h2>Notes &amp; open items</h2>
+    <ul class="notes">
+      <li>All three beads are identical in form — they differ only by the signs engraved.</li>
+      <li>Solid gold, to match the chain. Final size and karat to set with the jeweler.</li>
+      <li>The fine chain is shown for context — not part of what gets made.</li>
+    </ul>
+    <ul class="notes open" style="margin-top:14px;">
+      <li><span class="tag">DECIDE</span>Symbol style — keep the astrological symbols, go all-illustrated, or mix (see section 04).</li>
+      <li><span class="tag">TO GET</span>Lexi's rising sign — needs her birth date, exact time, and city.</li>
+      <li><span class="tag">AT BIRTH</span>Your son's moon &amp; rising — just make sure the exact birth time is noted. Sun is Cancer unless he's ~a week late.</li>
+    </ul>
+  </section>
+
+</div>
+
+<script>
+  function roundedPath(pts, r){
+    const n = pts.length; let d = '';
+    for(let i=0;i<n;i++){
+      const p0=pts[(i-1+n)%n], p1=pts[i], p2=pts[(i+1)%n];
+      const v1x=p1[0]-p0[0], v1y=p1[1]-p0[1];
+      const v2x=p2[0]-p1[0], v2y=p2[1]-p1[1];
+      const l1=Math.hypot(v1x,v1y)||1, l2=Math.hypot(v2x,v2y)||1;
+      const r1=Math.min(r,l1/2), r2=Math.min(r,l2/2);
+      const ax=p1[0]-v1x/l1*r1, ay=p1[1]-v1y/l1*r1;
+      const bx=p1[0]+v2x/l2*r2, by=p1[1]+v2y/l2*r2;
+      d += (i===0 ? `M ${ax.toFixed(2)} ${ay.toFixed(2)} ` : `L ${ax.toFixed(2)} ${ay.toFixed(2)} `);
+      d += `Q ${p1[0].toFixed(2)} ${p1[1].toFixed(2)} ${bx.toFixed(2)} ${by.toFixed(2)} `;
+    }
+    return d + 'Z';
+  }
+  document.querySelectorAll('path[data-poly]').forEach(el=>{
+    const pts = JSON.parse(el.getAttribute('data-poly'));
+    const r = parseFloat(el.getAttribute('data-r')||'8');
+    el.setAttribute('d', roundedPath(pts, r));
+  });
+</script>
 </body>
 </html>
